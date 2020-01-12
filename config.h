@@ -63,7 +63,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *volupcmd[]  = { "mixer", "vol", "+2", NULL };
 static const char *voldowncmd[]  = { "mixer", "vol", "-2", NULL };
 static const char *volmutecmd[]  = { "mixer", "vol", "0", NULL };
-static const char *plumbselectioncmd[] = { "sh", "-c", "sh ~/.suckless/plumb.sh \"$(xclip -o)\"", NULL };
+static const char *plumbselectioncmd[] = { "sh", "-c", "sh ~/.config/dwm/plumb.sh \"$(xclip -o)\"", NULL };
 static const char *findcursorcmd[] = { "find-cursor", NULL };
 
 static Key keys[] = {
