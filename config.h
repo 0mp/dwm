@@ -60,9 +60,6 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_green, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *volupcmd[]  = { "mixer", "vol", "+2", NULL };
-static const char *voldowncmd[]  = { "mixer", "vol", "-2", NULL };
-static const char *volmutecmd[]  = { "mixer", "vol", "0", NULL };
 static const char *plumbselectioncmd[] = { "sh", "-c", "sh ~/.config/desktop/plumb.sh \"$(xclip -o)\"", NULL };
 static const char *findcursorcmd[] = { "find-cursor", NULL };
 
@@ -101,9 +98,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_r,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ControlMask|Mod1Mask,  XK_q,      quit,           {0} },
-	{ 0,         XF86XK_AudioRaiseVolume,      spawn,          {.v = volupcmd} },
-	{ 0,         XF86XK_AudioLowerVolume,      spawn,          {.v = voldowncmd} },
-	{ 0,         XF86XK_AudioMute,             spawn,          {.v = volmutecmd} },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = plumbselectioncmd} },
 	{ MODKEY,                       XK_less,   spawn,          {.v = findcursorcmd} },
 };
